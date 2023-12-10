@@ -3,6 +3,7 @@ const allSeats = document.querySelectorAll('.seats .seat:not(.occupied)')
 const seatCountText = document.getElementById('count');
 const seatTotalText = document.getElementById('total');
 const movieList = document.getElementById('movie');
+const restartBtn = document.querySelector('button');
 let ticketPrice = +movieList.value;
 
 populateUI();
@@ -63,5 +64,22 @@ seats.addEventListener('click', (e) => {
     e.target.classList.toggle('selected');
     updateCount();
 })
+
+
+// restarting function
+function removeSelected() {
+    const bookedSeats = document.querySelectorAll('.seats .selected')
+
+    bookedSeats.forEach((seat) => {
+        if (seat.classList.contains('selected'))
+        seat.classList.remove('selected')
+    })
+
+    updateCount();
+}
+
+// restarting eventlistener
+
+restartBtn.addEventListener('click', removeSelected)
 
 updateCount();

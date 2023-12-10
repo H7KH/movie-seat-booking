@@ -92,10 +92,10 @@ body {
   height: 1.4rem;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
-  transition: 0.2s;
+  transition: 0.01s;
 }
 
-.seat:hover {
+.seat:active {
   scale: 1.2;
 }
 
@@ -122,6 +122,21 @@ body {
 #count,
 #total {
   color: #cc86fd;
+}
+
+.container button {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  background: #4cc9f0;
+  border-radius: 5rem;
+  transition: 0.3s;
+}
+
+.container button:hover {
+  color: white;
+  background: #0b6884;
 }
 
 @media screen and (min-width: 768px) {
