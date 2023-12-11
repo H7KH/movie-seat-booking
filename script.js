@@ -42,10 +42,10 @@ function populateUI() {
         })
     }
 
-    const selectedMoviePrice = localStorage.getItem('selectedMoviePrice');
+    const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
 
-    if (selectedMoviePrice !== null)
-    movieList.selectedIndex = selectedMoviePrice;
+    if (selectedMovieIndex !== null)
+    movieList.selectedIndex = selectedMovieIndex;
 
 }
 
